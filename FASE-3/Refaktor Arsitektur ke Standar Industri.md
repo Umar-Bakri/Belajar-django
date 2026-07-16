@@ -17,6 +17,10 @@ path('skill/', include('main.skill_urls'))
 ```
 
 Urusan detail CRUD diserahkan ke file lokal `skill_urls.py`.
+<img width="689" height="193" alt="image" src="https://github.com/user-attachments/assets/a0cf2699-d749-45e8-a49f-5497316905a4" />
+
+
+
 
 
 
