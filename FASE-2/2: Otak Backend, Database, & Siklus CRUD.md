@@ -43,7 +43,9 @@ def detail_proyek(request, id):
     }
     return render(request, 'portofolio/detail.html', konteks_data)
 
-    # 🎯 LANGKAH 2: Logika untuk menangkap inputan dari form browser
+tambah().
+
+#LANGKAH 2: Logika untuk menangkap inputan dari form browser
 @login_required
 def tambah_proyek(request):
     # Jika user menekan tombol "Simpan" (Mengirim data/POST)
