@@ -66,22 +66,22 @@ def tambah_proyek(request):
 Update: Ambil data lama lewat .get(), timpa nilainya, lalu panggil .save().
 @login_required
 def edit_proyek(request, id):
-  # 1. Ambil data proyek lama dari database berdasarkan ID
+  1. Ambil data proyek lama dari database berdasarkan ID
   proyek_lama = Project.objects.get(id=id)
   
-  # 2. Jika user menekan tombol "Simpan Perubahan" (POST)
+  2. Jika user menekan tombol "Simpan Perubahan" (POST)
   if request.method == 'POST':
-   # Tindih data lama dengan apa yang diketik baru oleh user
+   #Tindih data lama dengan apa yang diketik baru oleh user
    proyek_lama.judul = request.POST.get('judul')
    proyek_lama.teknologi = request.POST.get('teknologi')
    proyek_lama.deskripsi = request.POST.get('deskripsi')
    
-   # Simpan perubahan tersebut ke database
+   #Simpan perubahan tersebut ke database
    proyek_lama.save()
-   # Lempar balik user ke halaman detail proyek yang baru di-edit
+   #Lempar balik user ke halaman detail proyek yang baru di-edit
    return redirect('detail_proyek', id=proyek_lama.id)
 
- # 3. Jika user cuma buka halaman biasa (GET), tampilkan form yang berisi data lama
+ #3. Jika user cuma buka halaman biasa (GET), tampilkan form yang berisi data lama
   konteks_data = {
     'proyek': proyek_lama
 }  
